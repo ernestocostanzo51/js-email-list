@@ -13,7 +13,7 @@ function generazioneEmail(){
     const listaEl = document.createElement("ul")
     const elementoLista = document.createElement("li")
    
-    listaEl.textContent = mail
+    elementoLista.textContent = mail
     listaEl.appendChild(elementoLista)
     containerEl.appendChild(listaEl)
    
