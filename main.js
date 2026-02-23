@@ -24,6 +24,17 @@ function generazioneEmail(){
 
 generazioneEmail()
 
+
+
 const bottoneEl = document.createElement("button")
 bottoneEl.textContent ="Rigenera"
 containerEl.appendChild(bottoneEl)
+
+
+
+bottoneEl.addEventListener('click', function(e){
+    e.preventDefault()
+    containerEl.innerText=""
+    containerEl.appendChild(bottoneEl)
+    generazioneEmail()
+})
