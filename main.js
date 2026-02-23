@@ -1,6 +1,6 @@
 
 
-
+const listaEl = document.createElement("ul")
 const containerEl = document.getElementById("container")
 function generazioneEmail(){
     for (i=0; i<10; i++){
@@ -10,9 +10,9 @@ function generazioneEmail(){
     const mail = dato.response
     console.log(mail)
 
-    const listaEl = document.createElement("ul")
-    const elementoLista = document.createElement("li")
-   
+    
+    
+   const elementoLista = document.createElement("li")
     elementoLista.textContent = mail
     listaEl.appendChild(elementoLista)
     containerEl.appendChild(listaEl)
@@ -26,6 +26,7 @@ generazioneEmail()
 
 
 
+
 const bottoneEl = document.createElement("button")
 bottoneEl.textContent ="Rigenera"
 containerEl.appendChild(bottoneEl)
@@ -34,6 +35,7 @@ containerEl.appendChild(bottoneEl)
 
 bottoneEl.addEventListener('click', function(e){
     e.preventDefault()
+    listaEl.innerText=""
     containerEl.innerText=""
     containerEl.appendChild(bottoneEl)
     generazioneEmail()
