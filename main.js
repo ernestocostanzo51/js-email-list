@@ -2,6 +2,7 @@
 
 const listaEl = document.createElement("ul")
 const containerEl = document.getElementById("container")
+
 function generazioneEmail(){
     for (i=0; i<10; i++){
    fetch("https://flynn.boolean.careers/exercises/api/random/mail") 
