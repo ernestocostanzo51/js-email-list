@@ -1,19 +1,19 @@
-const listaEl = document.getElementById("lista")
 
 
 
+const containerEl = document.getElementById("container")
 
 for (i=0; i<10; i++){
    fetch("https://flynn.boolean.careers/exercises/api/random/mail") 
-   .then(res => res.json())
-   .then(data =>{
-    const mail = data.res
-    console.log(data)
+   .then(response  => response.json())
+   .then(dato =>{
+    const mail = dato.response
+    console.log(mail)
 
+    const listaEl = document.createElement("ul")
     const elementoLista = document.createElement("li")
     listaEl.textContent = mail
     listaEl.appendChild(elementoLista)
-
-
+    containerEl.appendChild(listaEl)
    })
 }
